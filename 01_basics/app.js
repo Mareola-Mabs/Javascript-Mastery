@@ -163,4 +163,77 @@ cl("")
 cl("")
 
 // Slice Method
+cl("firstname".slice(2,4))
+
+cl("")
+cl("")
+cl("")
+
+// Split and Join
+cl("firstname".split(""))
+cl("firstname".split(" "))
+cl(["f","i","r","s","t"].join(" "))
+cl(["f","i","r","s","t"].join(""))
+cl(["f","i","r","s","t"].join("6-"))
+
+cl("")
+cl("")
+cl("")
+
+// Includes
+cl(["f","i","r","s","t"].includes("i"))
+cl(mobile.includes("i"))
+
+cl("")
+cl("")
+cl("")
+
+// Trim
+cl("   Ibukunol a".trim())
+
+cl("")
+cl("")
+cl("")
+
+// Template Literals
+let desc = `this is a random
+            text`
+
+cl(desc)
+
+let item = "Iphone"
+let versions = 14
+
+console.log(`${item}${versions}`)
+
+// Challenge
+let favActorFirstName = "Tom"
+let favActorLastName = "Cruise"
+let actorFullName = `${favActorFirstName} ${favActorLastName}`
+let uppercase = actorFullName.toUpperCase()
+let message = `My favourite Actor is ${uppercase} and i think he's cool`
+message += ` his best movie was Knight and Day.`
+cl(message)
+
+cl("")
+cl("")
+cl("")
+
+// Type Conversion
+let money = "50"
+cl(typeof money)
+
+// String to Number
+cl(parseInt(money), typeof parseInt(money))
+cl(+money , typeof +(money))
+cl(Number(money) , typeof Number(money))
+
+cl("")
+cl("")
+cl("")
+
+// Number to String
+money = 50
+cl(money.toString(), typeof money.toString())
+cl(String(money), typeof String(money))
 
