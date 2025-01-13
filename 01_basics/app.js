@@ -237,3 +237,12 @@ money = 50
 cl(money.toString(), typeof money.toString())
 cl(String(money), typeof String(money))
 
+cl("")
+cl("")
+cl("")
+// String to Decimal
+cl(typeof parseFloat("50"))
+
+cl("")
+cl("")
+cl("")
