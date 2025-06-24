@@ -92,3 +92,6 @@ cl('')
 
 // Slice()
 cl(pl.slice(0, 2))
+
+const things = ["things", "are", "cool", "and", "fun"]
+cl(things.sort())

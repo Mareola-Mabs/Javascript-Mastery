@@ -1,4 +1,4 @@
-// Shorten console.log
+ // Shorten console.log
 const cl = console.log
 
 console.log(" ")
