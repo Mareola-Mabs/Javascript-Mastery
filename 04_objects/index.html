@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+        <title>Objects</title> <!-- TODO: update page title -->
+
+        <meta name="description" content="Page Description"> <!-- TODO: update meta description -->
+        <meta property="og:title" content="Home - Page">  <!-- TODO: update og:title -->
+        <meta property="og:url" content="https://www.example.com/page"> <!-- TODO: update og:url -->
+        <meta property="og:description" content="OG Page Description">  <!-- TODO: update og:description -->
+        <meta property="og:image" content="/path/to/image">  <!-- TODO: og:image -->
+        <meta property="og:image:alt" content="OG Image Description"> <!-- TODO: update og:image:alt -->
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="large-image-twitter.jpg"> <!-- TODO: update twitter:card -->
+        <link rel="canonical" href="https://www.example.com/page"> <!-- TODO: update canonical link -->
+        <link rel="icon" href="">
+        <link rel="icon" href="" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <meta name="theme-color" content="#FF00FF"> <!-- TODO: update meta theme color -->
+        <link rel="stylesheet" href="">  <!-- TODO: Update styles -->
+        <link rel="stylesheet" href="" media="print">
+    </head>
+
+    <body>
+
+        <!-- Content -->
+        <header>  </header>
+
+        <main>  </main>
+
+        <footer>  </footer>
+
+        <!-- Scripts -->
+        <script defer>
+
+            // Objects in JavaScript
+            const person =  {
+                key: "value", // key-value pair
+                "key with spaces": "value with spaces", // key with spaces
+                123: "value with number", // key as a number
+                true: "value with boolean", // key as a boolean
+                null: "value with null", // key as null
+                firstName: "John",
+                lastName: "Doe",
+                age: 30,
+                users: ["Alice", "Bob", "Charlie"], // array as a value
+                address: {
+                    street: "123 Main St",
+                    city: "Anytown",
+                    country: "USA"
+                }, // nested object
+                greet: function() { // method
+                    return (`Hello, my name is ${this.firstName} ${this.lastName}`);
+                }
+            }
+
+            // Accessing object properties
+            console.log(person.firstName); // Dot notation
+            console.log(person["lastName"]); // Bracket notation
+            console.log(person[123]); // Accessing by number key
+            console.log(person[true]); // Accessing by boolean key
+            console.log(person["key with spaces"]); // Accessing by key with spaces
+            console.log(person.address.city); // Accessing nested object property
+            console.log(person["address"]["city"]); // Accessing nested object property
+            console.log(person.users[0]); // Accessing array element
+            console.log(person.greet()); // Accessing the Method
+            
+
+            // Find the Length of an Object
+            console.log(Object.keys(person).length); // Using Object.keys() to get the number of
+
+            // FInd the Length of an Object using a for-in loop
+            const prop = []
+
+            for (key in person) { // Iterating over object properties
+                prop.push(key);
+            }
+
+            console.log(prop.length)
+
+            delete person[1234]
+            console.log(person)
+
+            console.log(" ")
+            console.log(" ")
+            console.log(" ")
+
+            const car = {
+                type: "S-Class",
+                model: "Mercedes-Maybach S 680 4MATIC",
+                color: "Obsidian Black",
+
+                
+                getObjectType: ()=>{
+                    return typeof car;
+                },
+                setObjectType: (type) => {
+                    car.type = type;
+                },
+                addProperty: (key, value) =>{
+                    car[key] = value;
+                }
+
+
+            }
+
+           console.log(car.getObjectType()) // Get the type of the car object
+           car.setObjectType("Luxury Toyota") // Set a new type for the car object
+              car.addProperty("wheels", "Star") // Add a new property to the car object
+            console.log(car)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script> <!-- TODO: Update app entry point -->
+    </body>
+
+</html>
