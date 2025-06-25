@@ -95,3 +95,10 @@ cl(pl.slice(0, 2))
 
 const things = ["things", "are", "cool", "and", "fun"]
 cl(things.sort())
+
+// Array Reduce Method
+const values = [2, 5, 7, 9]
+
+const newValues = values.reduce((acc, num) => acc + num, 1)
+
+console.log(newValues)
