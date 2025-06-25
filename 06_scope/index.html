@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width", initial-scale="1.0">
 
-        <title>Scope</title> <!-- TODO: update page title -->
+        <title>Scope and Methods</title> <!-- TODO: update page title -->
 
         <meta name="description" content="Page Description"> <!-- TODO: update meta description -->
         <meta property="og:title" content="Home - Page">  <!-- TODO: update og:title -->
@@ -36,12 +36,57 @@
 
         <!-- Scripts -->
         <script defer>
+            // SCOPES
 
-            
+            // Global Variable
+            let textCode = "Lorem Ispum" 
+
+            console.log(textCode)
+
+            {
+                // Local Variable
+                let newTextCode = "Lorem Ispum Dolor"
+                console.log(newTextCode)
+            }
+
+            try{
+                console.log(newTextCode) // Error, Cannot be Accessed (Not Defined)
+            }
+            catch(err){
+                console.log(err)
+            }
+
+            let i = 0
+            function increment(){
+                i++
+            }
+
+            increment()
+            console.log(i)
 
 
 
+            // METHODS
+            function greet(){
+                return `Hello, my name is ${person.name} ${person.lastName}`
+            }
 
+            const person ={
+                name: "John",
+                lastName: "Doe",
+                age: 30,
+                greet,
+                getAge: ()=>{
+                    return person.age
+                }
+            }
+
+            console.log(greet())
+
+            // OR
+            console.log(person.greet())
+
+            console.log(person.getAge())
 
 
 
