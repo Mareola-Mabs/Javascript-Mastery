@@ -1,0 +1,12 @@
+{
+    "name": "Ibukunola",
+    "age": 26,
+    "email": "bulun1001@gmail.com",
+    "hobbies": ["Coding", "Making Music", "Traveling", "Reading"],
+    "address": {
+        "street": "House 26A, Banana Island",
+        "city": "Lagos",
+        "country": "Nigeria"
+    }
+}
+
