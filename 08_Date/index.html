@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+        <title>Date</title> <!-- TODO: update page title -->
+
+        <meta name="description" content="Page Description"> <!-- TODO: update meta description -->
+        <meta property="og:title" content="Home - Page">  <!-- TODO: update og:title -->
+        <meta property="og:url" content="https://www.example.com/page"> <!-- TODO: update og:url -->
+        <meta property="og:description" content="OG Page Description">  <!-- TODO: update og:description -->
+        <meta property="og:image" content="/path/to/image">  <!-- TODO: og:image -->
+        <meta property="og:image:alt" content="OG Image Description"> <!-- TODO: update og:image:alt -->
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="large-image-twitter.jpg"> <!-- TODO: update twitter:card -->
+        <link rel="canonical" href="https://www.example.com/page"> <!-- TODO: update canonical link -->
+        <link rel="icon" href="">
+        <link rel="icon" href="" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <meta name="theme-color" content="#FF00FF"> <!-- TODO: update meta theme color -->
+        <link rel="stylesheet" href="">  <!-- TODO: Update styles -->
+        <link rel="stylesheet" href="" media="print">
+    </head>
+
+    <body>
+
+        <!-- Content -->
+        <header>  </header>
+
+        <main>  </main>
+
+        <footer>  </footer>
+
+        <!-- Scripts -->
+        <script defer>
+
+            // Date Object
+            // Getting the Date
+            const currentDate = new Date(2025, 5, 27, 10, 0, 0)
+            console.log(currentDate)
+
+
+            // Date Methods
+            const year = new Date().getFullYear()
+            console.log(year)
+
+            console.log(new Date().getMonth()) // 0-11
+            console.log(new Date().getDate()) // 1-31
+            console.log(new Date().getDay()) // 0-6 (0 = Sunday)
+            console.log(new Date().getHours()) // 0-23
+            console.log(new Date().getMinutes()) // 0-59
+            console.log(new Date().getSeconds()) // 0-59
+            console.log(new Date().getMilliseconds()) // 0-999
+            console.log(new Date().getTime()) // milliseconds since 1970-01-01
+
+
+            // Date Methods - Setting the Date
+            const date = new Date()
+            date.setFullYear(2025)
+            date.setMonth(5) // 0-11
+            date.setDate(27) // 1-31
+            date.setHours(13) // 0-23
+            date.setMinutes(10) // 0-59
+            date.setSeconds(0) // 0-59
+            date.setMilliseconds(0) // 0-999
+            console.log(date)
+
+
+            // Date Methods - Formatting the Date
+            console.log(date.toDateString()) // "Sat Jun 27 2025"
+            console.log(date.toTimeString()) // "13:10:00 GMT+0000 (Coordinated Universal Time)"
+            console.log(date.toISOString()) // "2025-06-27T13:10:00.000Z"
+            console.log(date.toLocaleDateString()) // "6/27/2025"
+            console.log(date.toLocaleTimeString()) // "1:10:00 PM"
+            console.log(date.toLocaleString()) // "6/
+
+
+            const newDate = date.getDate() + 1
+            console.log(newDate) // 28
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script> <!-- TODO: Update app entry point -->
+    </body>
+
+</html>
