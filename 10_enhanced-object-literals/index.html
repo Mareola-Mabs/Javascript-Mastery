@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+        <title>Enhanced Object Literals</title> <!-- TODO: update page title -->
+
+        <meta name="description" content="Page Description"> <!-- TODO: update meta description -->
+        <meta property="og:title" content="Home - Page">  <!-- TODO: update og:title -->
+        <meta property="og:url" content="https://www.example.com/page"> <!-- TODO: update og:url -->
+        <meta property="og:description" content="OG Page Description">  <!-- TODO: update og:description -->
+        <meta property="og:image" content="/path/to/image">  <!-- TODO: og:image -->
+        <meta property="og:image:alt" content="OG Image Description"> <!-- TODO: update og:image:alt -->
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="large-image-twitter.jpg"> <!-- TODO: update twitter:card -->
+        <link rel="canonical" href="https://www.example.com/page"> <!-- TODO: update canonical link -->
+        <link rel="icon" href="">
+        <link rel="icon" href="" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <meta name="theme-color" content="#FF00FF"> <!-- TODO: update meta theme color -->
+        <link rel="stylesheet" href="">  <!-- TODO: Update styles -->
+        <link rel="stylesheet" href="" media="print">
+    </head>
+
+    <body>
+
+        <!-- Content -->
+        <header>  </header>
+
+        <main>  </main>
+
+        <footer>  </footer>
+
+        <!-- Scripts -->
+        <script defer>
+
+            function user(name, age, work){
+                this.name = name
+                this.age = age
+                this.work = work
+
+                return (`${name} ${work} ${age}`)
+            }
+
+            console.log(user("Dr. Ibukunola", 26, "CTO, Software Engineer"))
+
+            function person(name, age, work){
+                return{
+                    name: name,
+                    age: age,
+                    work: work
+                }
+            }
+
+            console.log(person("Dr. Ibukunola", 26, "CTO, Software Engineer"))
+
+            const newPerson = person("Dr. Ibukunola", 27, "CTO, Software Engineer")
+            console.log(newPerson)
+
+
+            function arrays(name, age, work){
+                return[
+                    name, age, work
+                ]
+            }
+
+            const newArray = arrays("Dr. Ibukunola", 27, "CTO, Software Engineer")
+            console.log(newArray)
+
+
+            function newObject(sunName, age, year){
+                return {
+                    sunName,
+                    age,
+                    year,
+                    intro(){
+                        return `hello ${sunName}`
+                    }
+                }
+            }
+
+            const newObject1 = newObject("Mabawonku", 27, "2027")
+            console.log(newObject1)
+            console.log(newObject1.intro())
+
+
+            const person1 = {
+                itro(){
+
+                }
+            }
+
+      
+            let a = 1, b = 2, c = "Hello"
+
+            const obj = {
+                a,
+                b,
+                c,
+                all(){
+                    return `The Values are: ${a}, ${b} and ${c}`
+                }
+            }
+
+            console.log(obj)
+            console.log(obj.all())
+
+
+
+
+
+
+
+
+
+
+        </script> <!-- TODO: Update app entry point -->
+    </body>
+
+</html>
