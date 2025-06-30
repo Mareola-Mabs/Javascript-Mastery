@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+        <title>Spread Operator</title> <!-- TODO: update page title -->
+
+        <meta name="description" content="Page Description"> <!-- TODO: update meta description -->
+        <meta property="og:title" content="Home - Page">  <!-- TODO: update og:title -->
+        <meta property="og:url" content="https://www.example.com/page"> <!-- TODO: update og:url -->
+        <meta property="og:description" content="OG Page Description">  <!-- TODO: update og:description -->
+        <meta property="og:image" content="/path/to/image">  <!-- TODO: og:image -->
+        <meta property="og:image:alt" content="OG Image Description"> <!-- TODO: update og:image:alt -->
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="large-image-twitter.jpg"> <!-- TODO: update twitter:card -->
+        <link rel="canonical" href="https://www.example.com/page"> <!-- TODO: update canonical link -->
+        <link rel="icon" href="">
+        <link rel="icon" href="" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <meta name="theme-color" content="#FF00FF"> <!-- TODO: update meta theme color -->
+        <link rel="stylesheet" href="">  <!-- TODO: Update styles -->
+        <link rel="stylesheet" href="" media="print">
+    </head>
+
+    <body>
+
+        <!-- Content -->
+        <header>  </header>
+
+        <main>  </main>
+
+        <footer>  </footer>
+
+        <!-- Scripts -->
+        <script defer>
+            // Spread Operator
+            // Spread operator is used to expand an iterable (like an array) into its elements.
+            const colors = ["blue", "red", "pink", "green", "yellow"]
+            const colors1 = ["blue", "red", "pink", "green", "yellow"]
+
+
+            giveMe4 = (a, b, c, d, e, f, g)=>{
+                console.log(a)
+                console.log(b)
+                console.log(c)
+                console.log(d)
+                console.log(e)
+                console.log(f)
+                console.log(g)
+                return (a, b, c, d, e, f, g)
+            }
+
+            giveMe4(...colors, ...colors1)
+            console.log(...colors, ...colors1)
+
+
+            // For concatenating Arrays
+            const arr1 = [1, 2, 3]
+            const arr2 = [4, 5, 6]
+            const arr3 = [...arr1, ...arr2]
+            console.log(arr3) // [1, 2, 3, 4, 5, 6]
+
+
+
+            // For copying Arrays into another
+            const allPeeps = ["helly", ...arr1, "world"]
+            console.log(allPeeps) // ["helly", 1, 2, 3, "world"]
+
+
+            // Spread Operator with Objects
+            const obj1 = {
+                x: 1,
+                y: 2
+            }
+
+            const obj2 = {
+                z: 3,
+                w: 4
+            }
+
+            const merged = {...obj1, ...obj2,
+                d: 3,
+
+            }
+            console.log(merged) // {x: 1, y: 2, z: 3, w: 4, d: 3}
+
+
+
+
+
+
+
+
+
+        </script> <!-- TODO: Update app entry point -->
+    </body>
+
+</html>
