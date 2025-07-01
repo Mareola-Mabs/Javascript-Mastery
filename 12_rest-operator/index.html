@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width", initial-scale="1.0">
 
-        <title>Spread Operator</title> <!-- TODO: update page title -->
+        <title>Rest Operator</title> <!-- TODO: update page title -->
 
         <meta name="description" content="Page Description"> <!-- TODO: update meta description -->
         <meta property="og:title" content="Home - Page">  <!-- TODO: update og:title -->
@@ -27,8 +27,6 @@
 
     <body>
 
-        
-
         <!-- Content -->
         <header>  </header>
 
@@ -38,56 +36,48 @@
 
         <!-- Scripts -->
         <script defer>
-            // Spread Operator
-            // Spread operator is used to expand an iterable (like an array) into its elements.
-            const colors = ["blue", "red", "pink", "green", "yellow"]
-            const colors1 = ["blue", "red", "pink", "green", "yellow"]
 
-
-            giveMe4 = (a, b, c, d, e, f, g)=>{
-                console.log(a)
-                console.log(b)
-                console.log(c)
-                console.log(d)
-                console.log(e)
-                console.log(f)
-                console.log(g)
-                return (a, b, c, d, e, f, g)
+            // A function accepting any number of arguments using the rest operator
+            function user(...args){
+                if (args.every(item => typeof item === 'number')){
+                    let newNum = args.reduce((acc, num)=> acc + num, 0);
+                    console.log(newNum);
+                } else {
+                    console.log('Some arguments are not Numbers');
+                }
             }
 
-            giveMe4(...colors, ...colors1)
-            console.log(...colors, ...colors1)
+            user(30, 40, 60, "blah");
+            user(30, 40, 60);
 
 
-            // For concatenating Arrays
-            const arr1 = [1, 2, 3]
-            const arr2 = [4, 5, 6]
-            const arr3 = [...arr1, ...arr2]
-            console.log(arr3) // [1, 2, 3, 4, 5, 6]
+            // Used in destructuring to collect the rest of the properties
+            const numbers = [1, 2, 3, 4, 5, 6];
+            const [first, second, ...rest] = numbers;
+            console.log(first); // 1
+            console.log(second); // 2
+            console.log(rest); // 3, 4, 5, 6
+
+            const newNums = [4, 5, 6];
+            newNums.every(num => console.log(num > 4));
+
+            const newNums1 = newNums.filter(num => num > 4);
+            console.log(newNums1); // 5, 6
 
 
-
-            // For copying Arrays into another
-            const allPeeps = ["helly", ...arr1, "world"]
-            console.log(allPeeps) // ["helly", 1, 2, 3, "world"]
-
-
-            // Spread Operator with Objects
-            const obj1 = {
-                x: 1,
-                y: 2
+            // Used in function parameters to collect the rest of the arguments
+            getDetails = (firstName, lastName, ...hobbies)=>{
+                return{
+                    firstName,
+                    lastName,
+                    hobbies
+                }
             }
 
-            const obj2 = {
-                z: 3,
-                w: 4
-            }
+            console.log(getDetails("John", "Doe", "Reading", "Traveling", "Cooking"));
 
-            const merged = {...obj1, ...obj2,
-                d: 3,
 
-            }
-            console.log(merged) // {x: 1, y: 2, z: 3, w: 4, d: 3}
+
 
 
 
@@ -98,6 +88,7 @@
 
 
         </script> <!-- TODO: Update app entry point -->
+
     </body>
 
 </html>
