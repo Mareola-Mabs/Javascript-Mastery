@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+        <title>More Array Methods</title> <!-- TODO: update page title -->
+
+        <meta name="description" content="Page Description"> <!-- TODO: update meta description -->
+        <meta property="og:title" content="Home - Page">  <!-- TODO: update og:title -->
+        <meta property="og:url" content="https://www.example.com/page"> <!-- TODO: update og:url -->
+        <meta property="og:description" content="OG Page Description">  <!-- TODO: update og:description -->
+        <meta property="og:image" content="/path/to/image">  <!-- TODO: og:image -->
+        <meta property="og:image:alt" content="OG Image Description"> <!-- TODO: update og:image:alt -->
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="large-image-twitter.jpg"> <!-- TODO: update twitter:card -->
+        <link rel="canonical" href="https://www.example.com/page"> <!-- TODO: update canonical link -->
+        <link rel="icon" href="">
+        <link rel="icon" href="" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <meta name="theme-color" content="#FF00FF"> <!-- TODO: update meta theme color -->
+        <link rel="stylesheet" href="">  <!-- TODO: Update styles -->
+        <link rel="stylesheet" href="" media="print">
+    </head>
+
+    <body>
+
+        <!-- Content -->
+        <header>  </header>
+
+        <main>  </main>
+
+        <footer>  </footer>
+
+        <!-- Scripts -->
+        <script defer>
+
+            // Array Reduce Method
+            // Reduces the array to a single value
+
+            // To sum up all values in an array
+            const numbers2 = [1, 2, 3, 4, 5]
+            const sum = numbers2.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+            console.log(sum) // 15
+
+
+            console.log("")
+            console.log("")
+
+
+            // Finding the oldest age
+            // const ages = [5, 400, 3, 3, 3, 2, 4, 1, 20, 100, 50, 10, 30, 60, 70, 80, 90, ]
+
+            // Array with 1000 scatteered numbers
+            const ages = [5, 400, 3, 2, 4, 1, 20, 100, 50, 10, 30, 60, 70, 80, 90,
+                15, 25, 35, 45, 55, 65, 75, 85, 95,
+                105, 115, 125, 135, 145, 155,
+                165, 175, 185, 195, 205, 215, 225, 235, 245,
+                255, 265, 275, 285, 295, 305, 315, 325, 335,
+                345, 355, 365, 375, 385, 395, 405, 415, 425,
+                435, 445, 455, 465, 475, 485, 495,
+                505, 515, 525, 535, 545, 555, 565, 575, 585,
+                595, 605, 615, 625, 635, 645, 655, 665, 675,
+                685, 695, 705, 715, 725, 735, 745,
+                755, 765, 775, 785, 795, 805, 815, 825, 835,
+                845, 855, 865, 875, 885, 895, 905,
+                915, 925, 935, 945, 955, 965, 975,
+            ]
+
+
+            let temp = []
+
+            let i = 0
+
+            function sortAges(){
+                for (i; i <= ages.length; i++){
+                    if (ages[i] > ages[i+1]){
+
+                        
+                        temp[i] = ages[i]
+                        
+                        ages[i] = ages[i+1]
+                        ages[i+1] = temp[i]
+
+                        i = 0
+                        sortAges()
+                    }
+                }
+            }
+
+            sortAges()
+            console.log(ages) // NewlySorted Array
+            console.log(temp)
+
+
+            
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+        </script> <!-- TODO: Update app entry point -->
+    </body>
+
+</html>
