@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+        <title>Array Methods</title> <!-- TODO: update page title -->
+
+        <meta name="description" content="Page Description"> <!-- TODO: update meta description -->
+        <meta property="og:title" content="Home - Page">  <!-- TODO: update og:title -->
+        <meta property="og:url" content="https://www.example.com/page"> <!-- TODO: update og:url -->
+        <meta property="og:description" content="OG Page Description">  <!-- TODO: update og:description -->
+        <meta property="og:image" content="/path/to/image">  <!-- TODO: og:image -->
+        <meta property="og:image:alt" content="OG Image Description"> <!-- TODO: update og:image:alt -->
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="large-image-twitter.jpg"> <!-- TODO: update twitter:card -->
+        <link rel="canonical" href="https://www.example.com/page"> <!-- TODO: update canonical link -->
+        <link rel="icon" href="">
+        <link rel="icon" href="" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <meta name="theme-color" content="#FF00FF"> <!-- TODO: update meta theme color -->
+        <link rel="stylesheet" href="">  <!-- TODO: Update styles -->
+        <link rel="stylesheet" href="" media="print">
+    </head>
+
+    <body>
+
+        <!-- Content -->
+        <header>  </header>
+
+        <main>  </main>
+
+        <footer>  </footer>
+
+        <!-- Scripts -->
+        <script defer>
+
+            const arr = ["hello", "bird", "cat", "dog", "fish"];
+
+            const newArr = []
+
+            arr.forEach((item, index, array) => {
+
+
+                newArr[index] = item[0].toUpperCase() + item.substring(1)
+                
+                
+
+            })
+
+            console.log(newArr)
+            console.log(arr)
+
+            
+
+            // Using .map(). It automatically creates a new array
+
+            const words = ["since", "time", "then", "think"]
+
+            const newWords = words.map(item => item[0].toUpperCase() + item.substring(1));
+
+            console.log(newWords)
+
+
+            const names = [
+                {
+                    firstname: "John",
+                    lastname: "Doe",
+                    age: 30
+                },
+                {
+                    firstname: "Jane",
+                    lastname: "Smith",
+                    age: 25
+                }
+            ]
+
+            const newNames = names.map(item =>{
+                return {
+                    firstname: item.firstname,
+                    lastname: item.lastname,
+                    age: item.age
+                }
+                    
+            })
+
+            console.log(newNames)
+
+
+            // Array Filter Method
+
+            const ages = [32, 33, 16, 40]
+
+            console.log(ages.filter(age => age >= 18)) // Returns an array of ages that are 18 or older
+
+            
+            const computers = [
+
+                {
+                    ram: 4,
+                    hdd: 100,
+                    hddSize: "GB",
+                    ramSize: "GB",
+
+                    getHddSIze(){
+                        return this.hdd + this.hddSize
+                    },
+
+                    getRamSize(){
+                        return this.ramSize + this.ram
+                    }
+                },
+
+                {
+                    ram: 16,
+                    hdd: 500,
+                    hddSize: "GB",
+                    ramSize: "GB",
+
+                    getHddSIze(){
+                        return this.hdd + this.hddSize
+                    },
+
+                    getRamSize(){
+                        return this.ramSize + this.ram
+                    }
+                },
+                {
+                    ram: 2,
+                    hdd: 500,
+                    hddSize: "GB",
+                    ramSize: "GB",
+
+                    getHddSIze(){
+                        return this.hdd + this.hddSize
+                    },
+
+                    getRamSize(){
+                        return this.ramSize + this.ram
+                    }
+                }
+            ]
+
+            console.log(computers.filter(item =>{
+                return item.ram >= 4
+            }))
+
+            
+
+
+
+            // Array Find Method
+            // Returns the first element that matches the condition
+            const computersTest = [
+
+                {
+                    ram: 4,
+                    hdd: 100,
+                    hddSize: "GB",
+                    ramSize: "GB",
+
+                    getHddSIze(){
+                        return this.hdd + this.hddSize
+                    },
+
+                    getRamSize(){
+                        return this.ramSize + this.ram
+                    }
+                },
+
+                {
+                    ram: 16,
+                    hdd: 500,
+                    hddSize: "GB",
+                    ramSize: "GB",
+
+                    getHddSIze(){
+                        return this.hdd + this.hddSize
+                    },
+
+                    getRamSize(){
+                        return this.ramSize + this.ram
+                    }
+                },
+                {
+                    ram: 2,
+                    hdd: 500,
+                    hddSize: "GB",
+                    ramSize: "GB",
+
+                    getHddSIze(){
+                        return this.hdd + this.hddSize
+                    },
+
+                    getRamSize(){
+                        return this.ramSize + this.ram
+                    }
+                }
+            ]
+
+            console.log(computersTest.find(item => item.ram > 4))
+
+
+
+            // The break Keyword
+            for(let i = 0; i <=5; i++){
+                if (i > 2){
+                    console.log(i)
+                    break
+                }
+            }
+
+            for(let i = 0; i <=5; i++){
+                if (i > 2){
+                    break
+                }
+
+                console.log(i)
+
+            }
+
+            // Array Every Method
+
+            // Returns true if all elements match the condition
+            const numbers = [1, 2, 3, 4, 5]
+            console.log(numbers.every(item => item > 0)) // true
+            console.log(numbers.every(item => item > 2)) // false
+
+            console.log("")
+            console.log("")
+
+
+            // Array Some Method
+            // Returns true if at least one element matches the condition
+            console.log(numbers.some(item => item > 4)) // true
+            console.log(numbers.some(item => item > 5)) // false
+
+            console.log("")
+            console.log("")
+
+            
+
+            
+
+
+
+        </script> <!-- TODO: Update app entry point -->
+    </body>
+
+</html>
