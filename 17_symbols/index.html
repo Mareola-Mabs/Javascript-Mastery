@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+        <title>Symbols</title> <!-- TODO: update page title -->
+
+        <meta name="description" content="Page Description"> <!-- TODO: update meta description -->
+        <meta property="og:title" content="Home - Page">  <!-- TODO: update og:title -->
+        <meta property="og:description" content="OG Page Description">  <!-- TODO: update og:description -->
+        <meta property="og:image" content="/path/to/image">  <!-- TODO: og:image -->
+        <meta property="og:image:alt" content="OG Image Description"> <!-- TODO: update og:image:alt -->
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="large-image-twitter.jpg"> <!-- TODO: update twitter:card -->
+        <link rel="icon" href="">
+        <link rel="icon" href="" type="image/svg+xml">
+        <link rel="stylesheet" href="">  <!-- TODO: Update        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <meta name="theme-color" content="#FF00FF"> <!-- TODO: update  styles -->
+        <link rel="stylesheet" href="" media="print">
+    </head>
+
+    <body>
+
+        <!-- Content -->
+        <header>  </header>
+
+        <main>  </main>
+
+        <footer>  </footer>
+
+        <!-- Scripts -->
+        <script defer>
+
+            // Creating a Symbol
+            const mySymbol = Symbol();
+            console.log(mySymbol)
+
+            console.log(typeof mySymbol); // "symbol"
+
+
+            // Creating a Symbol with a description
+            const mySymbolWithDescription = Symbol('my description');
+
+            console.log(mySymbolWithDescription); // Symbol(my description)
+            console.log(mySymbolWithDescription.description); // "my description"
+
+
+            const newSymbol = Symbol('new symbol');
+            const newSymbol1 = Symbol('new symbol');
+
+            console.log(typeof newSymbol.description === typeof newSymbol1.description) //true
+
+
+            const symbolName = Symbol('name');
+            const symbolType = Symbol('type');
+            const age = Symbol('age');
+
+
+            const myObject = {
+                [symbolName]: 'John Doe',
+                [symbolType]: 'Person',
+                [age]: 30
+            };
+
+            console.log(myObject[symbolName]); // "John Doe"
+            console.log(myObject[symbolType]); // "Person"
+            console.log(myObject[age]); // 30
+
+            console.log(myObject)
+
+            for (let i in myObject){
+                console.log(); // This will not log the symbol keys
+            }
+
+            console.log(Object.keys(myObject)); // This will not include symbol keys
+            console.log(Object.getOwnPropertySymbols(myObject)[0]); // This will not include symbol keys
+
+            Object.getOwnPropertySymbols(myObject).forEach(symbol => {
+                console.log(symbol, myObject[symbol]); // This will log the symbol keys and their values
+            });
+
+
+
+
+
+        </script> <!-- TODO: Update app entry point -->
+    </body>
+
+</html>
