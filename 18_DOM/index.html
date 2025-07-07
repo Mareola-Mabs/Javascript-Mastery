@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+        <title>DOM</title> <!-- TODO: update page title -->
+
+        <meta name="description" content="Page Description"> <!-- TODO: update meta description -->
+        <meta property="og:title" content="Home - Page">  <!-- TODO: update og:title -->
+        <meta property="og:description" content="OG Page Description">  <!-- TODO: update og:description -->
+        <meta property="og:image" content="/path/to/image">  <!-- TODO: og:image -->
+        <meta property="og:image:alt" content="OG Image Description"> <!-- TODO: update og:image:alt -->
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="large-image-twitter.jpg"> <!-- TODO: update twitter:card -->
+        <link rel="icon" href="">
+        <link rel="icon" href="" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <meta name="theme-color" content="#FF00FF"> <!-- TODO: update meta theme color -->
+        <link rel="stylesheet" href="">  <!-- TODO: Update styles -->
+        <link rel="stylesheet" href="" media="print">
+    </head>
+
+    <body>
+
+        <!-- Content -->
+        <header class="header header headerOne items itemOne"> The Header </header>
+        <header id="h1"> The Header </header>
+
+        <main> Main Tag </main>
+
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+        </ul>
+
+
+        <input type="password" name="password" id="password" placeholder="">
+        <button>View Password</button>
+
+
+        <a href="./index.html">A Link</a>
+
+        <footer> Footer </footer>
+
+        <!-- Scripts -->
+        <script defer>
+
+            console.dir(document)
+            console.log(document.location.href)
+            console.log(document.title)
+            console.log(document.body)
+            console.log(document.head.outerHTML)
+            console.log(document.head.outerText)   
+            
+            // Get Items with Tag Name
+            const header = document.getElementsByTagName('header') //Returns a collection of items, an array
+           
+            console.log(header)
+            console.log(header[0])
+
+            // Get With ID
+            const h1 = document.getElementById('h1')
+
+            h1.addEventListener("click", e => console.dir(e))
+
+
+            // By Query Selector
+            const listItems = document.querySelectorAll('ul > li')
+            console.log(listItems)
+
+            // Manipulating the Classlist
+
+            console.log(header[0].classList[0])
+
+            header[0].classList.toggle("names")
+
+
+            // Getting and Setting Attributes
+            console.log(header[0].getAttribute("class"))
+
+
+            const a = document.querySelector('a')
+            console.log(a.getAttribute("href"))
+            console.log(a.href)
+
+
+            a.setAttribute("id", "name")
+            a.setAttribute("href", "https://www.google.com")
+
+
+
+
+            const inputPass = document.getElementById("password")
+            const viewBtn = document.getElementsByTagName("button")[0]
+
+            let i = 0
+
+            viewBtn.addEventListener("click", ()=>{
+                i++
+
+                i%2 === 0? inputPass.setAttribute("type", "password") : inputPass.setAttribute("type", "text")
+
+            })
+
+            console.log(viewBtn.parentElement)
+
+            viewBtn.style = "background: green"
+
+
+
+
+
+
+
+
+            
+
+
+
+
+        </script> <!-- TODO: Update app entry point -->
+    </body>
+
+</html>
