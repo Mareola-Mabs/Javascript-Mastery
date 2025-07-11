@@ -112,6 +112,36 @@
             console.log(vehicle1)
 
 
+            // Constructor Functions
+            function CreatePeople(firstName, lastName, pl){
+                this.firstName = firstName
+                this.lastName = lastName
+                this.pl = pl
+
+                this.say = ()=>{
+                    return this
+                }
+
+                this.fullname = ()=>{
+                    return this.firstName + this.lastName
+                }
+            }
+
+            const person1 = new CreatePeople("Mareola", "Mabs", "NodeJs")
+
+            console.log(person1.fullname())
+
+            console.log(person1.say())
+
+            console.log(person1)
+
+            person1.tools = {
+                block: "hammer"
+            }
+
+            console.log(person1)
+
+
         </script> <!-- TODO: Update app entry point -->
     </body>
 
