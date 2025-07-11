@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+        <title>Intro to OOP</title> <!-- TODO: update page title -->
+
+        <meta name="description" content="Page Description"> <!-- TODO: update meta description -->
+        <meta property="og:title" content="Home - Page">  <!-- TODO: update og:title -->
+        <meta property="og:description" content="OG Page Description">  <!-- TODO: update og:description -->
+        <meta property="og:image" content="/path/to/image">  <!-- TODO: og:image -->
+        <meta property="og:image:alt" content="OG Image Description"> <!-- TODO: update og:image:alt -->
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="large-image-twitter.jpg"> <!-- TODO: update twitter:card -->
+        <link rel="icon" href="">
+        <link rel="icon" href="" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <meta name="theme-color" content="#FF00FF"> <!-- TODO: update meta theme color -->
+        <link rel="stylesheet" href="">  <!-- TODO: Update styles -->
+        <link rel="stylesheet" href="" media="print">
+    </head>
+
+    <body>
+
+        <!-- Content -->
+        <header>  </header>
+
+        <main>  </main>
+
+        <footer>  </footer>
+
+        <!-- Scripts -->
+        <script defer>
+            // this Keyword
+
+            // Here, it refers to the window object
+            this.addEventListener("click", ()=>{
+                if (this) alert("ok")
+            })
+
+            console.log(this)
+
+            console.log(this === window) //true
+
+            window.firstName = "Mareola" // creating and setting a property to the window object
+
+            console.log(window.firstName) //Mareola
+            console.log(window) //window object
+
+
+            // This Keyword in a Function
+
+            // Still refers to the Window Object
+            function returnThis(){
+                return (this, this === window) //window, true
+            }
+
+            console.log(returnThis())
+
+            // This Keyword in an Object
+
+            // It will refer to the owner of the Object
+            const obj = {
+                name: "Mareola",
+                age: 26,
+                nameAge: function() {
+                    return `Name: ${this.name} Age: ${this.age}` //Name: Mareola Age: 26
+                },
+                nameAge1() {
+                    return `Name: ${this.name} Age: ${this.age}` //Name: Mareola Age: 26
+                },
+                nameAge2: ()=>{
+                    return `Name: ${this.name} Age: ${this.age}` //Name: Undefined Age: Undefined
+                }
+            }
+
+            console.log(obj.nameAge())
+            console.log(obj.nameAge1())
+            console.log(obj.nameAge2())
+
+
+
+        </script> <!-- TODO: Update app entry point -->
+    </body>
+
+</html>
