@@ -83,6 +83,35 @@
 
 
 
+            // Factory Functions
+
+            function person (name, age){
+                return {
+                    name: name || "New User",
+                    age: age || ""
+                }
+            }
+
+            newPerson = person()
+
+            console.log(person("Ibukunola", 26), newPerson)
+
+
+            // Example
+            function createVehicle(type, brand, model, year){
+                return {
+                    type,
+                    brand,
+                    model,
+                    year,
+                }
+            }
+
+            const vehicle1 = createVehicle("Car", "Mercedes", "S", "2025")
+
+            console.log(vehicle1)
+
+
         </script> <!-- TODO: Update app entry point -->
     </body>
 
