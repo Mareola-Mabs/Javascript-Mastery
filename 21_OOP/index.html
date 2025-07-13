@@ -84,7 +84,6 @@
 
 
             // Factory Functions
-
             function person (name, age){
                 return {
                     name: name || "New User",
@@ -140,6 +139,163 @@
             }
 
             console.log(person1)
+
+
+            // Built in Constructors
+            const number = new Number(10) //Number Constructor
+            console.log(number)
+
+
+            const str1 = new String("Mareola") //String Constructor
+
+            const values = Object.values(str1)
+            let newValues = values.reduce((acc, num) => acc + num)
+            console.log(newValues)
+
+            const bool = new Boolean(false) //Boolean constructor
+            console.log(bool, typeof bool)
+
+            const arr = new Array(1, 2, 3) //Array Constructor
+            console.log(arr)
+
+
+
+            // Object.create() Method 
+
+            let personNew = {
+                greet(){
+                    console.log(`Hello, my name is ${this.firstName}`)
+                }
+            }
+
+            const personNew1 = Object.create(personNew)
+
+            personNew1.firstName = "Mareola"
+
+            console.log(personNew1["firstName"])
+
+            personNew1.greet()
+
+
+            const john = Object.create(personNew, {
+                firstName: {value: "John"},
+                lastName: {value: "Doe"},
+
+            })
+
+            console.log(john["firstName"])
+
+
+            // Object Prototype
+            const object = {}
+
+            // Getting the ePrototype
+            console.log(object.__proto__)
+
+            console.log(object.__proto__.__proto__) //null for prototype of prototype
+
+            console.log(object.constructor.prototype)
+
+            console.log(Object.getPrototypeOf(object))
+
+
+            // Changing Built in Object Methods via Prototype
+
+            Array.prototype.pop = function(){
+                return "Pop it up Babe"
+            }
+
+            const myArr = ["one", "two", "three"]
+
+            console.log(myArr.pop()) //Pop it up Babe
+
+
+            // creating your own methods
+
+            String.prototype.convertUpper = function(){
+                return this.toUpperCase()
+            }
+
+            const itemsA = "this is a test"
+
+            console.log(itemsA.convertUpper())
+
+            console.log(itemsA)
+
+            let i = 0, temp = []
+
+            Array.prototype.binarySort = function(){
+                return sortAges(this)
+            }
+
+            const newArrays = [4, 5, 6, 1, 1]
+
+            console.log(newArrays.binarySort())
+
+            
+
+            function sortAges(sortString){
+                for (i; i < sortString.length; i++){
+                    if (sortString[i] === undefined){
+                        console.log(" Array contains undefined values, please remove them before sorting")
+                        i = 0
+                        break
+
+                        return false
+
+                        
+                    }
+                    else{
+                        if (sortString[i] > sortString[i+1]){
+
+                        temp[i] = sortString[i]
+
+                        sortString[i] = sortString[i+1]
+                        sortString[i+1] = temp[i]
+
+                        i = 0
+                        sortAges(sortString)
+                    }
+                    }
+                }
+            }
+
+
+
+            // Prototypal Inheritance 
+            function Animal(name){
+                this.name = name
+            }
+
+            Animal.prototype.sound = function(){
+                return `${this.name} makes Animal Sound`
+            }
+
+            const animal1 = new Animal("Thor")
+
+            console.log(animal1.sound())
+
+            function Dog(name, breed){
+                this.breed = breed
+                Animal.call(this, name)
+            }
+
+            Dog.prototype = Object.create(Animal.prototype)
+
+            Dog.prototype.bark = function(){
+                return "Wolf!"
+            }
+
+
+            const dog1 = new Dog("Thoria", "German Shepard")
+
+
+            console.log(dog1.sound())
+            console.log(dog1.bark())
+        
+
+
+            
 
 
         </script> <!-- TODO: Update app entry point -->
