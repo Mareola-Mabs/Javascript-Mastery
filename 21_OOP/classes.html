@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+        <title>Classes in OOP</title> <!-- TODO: update page title -->
+
+        <meta name="description" content="Page Description"> <!-- TODO: update meta description -->
+        <meta property="og:description" content="OG Page Description">  <!-- TODO: update og:description -->
+        <meta property="og:image" content="/path/to/image">  <!-- TODO: og:image -->
+        <meta property="og:image:alt" content="OG Image Description"> <!-- TODO: update og:image:alt -->
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="large-image-twitter.jpg"> <!-- TODO: update twitter:card -->
+        <link rel="icon" href="">
+        <link rel="icon" href="" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <meta name="theme-color" content="#FF00FF"> <!-- TODO: update meta theme color -->
+        <link rel="stylesheet" href="">  <!-- TODO: Update styles -->
+        <link rel="stylesheet" href="" media="print">
+    </head>
+
+    <body>
+
+        <!-- Content -->
+        <header>  </header>
+
+        <main>  </main>
+
+        <footer>  </footer>
+
+        <!-- Scripts -->
+        <script defer>
+
+            class Person{
+                constructor(firstName, lastName, age){
+                    this.firstName = firstName
+                    this.lastName = lastName
+                    this.age = age
+                    this.printInfo = function(){
+                        return this.firstName+" "+this.lastName
+                    }
+                }
+
+
+
+                greet(){
+                    return "hello"+this.firstName+this.lastName
+                }
+            }
+
+
+            const ade = new Person("Ade", "James", 20)
+
+            console.log(ade)
+            console.log(ade.greet())
+            console.log(ade.printInfo())
+
+
+            // Inheritance
+            class newPerson extends Person{
+                constructor (firstName, lastName, age, sex){
+                    super(firstName, lastName, age)
+
+                    this.sex = sex
+                }
+
+                saySex(){
+                    return this.sex
+                }
+            }
+
+            const femi = new newPerson("Femi", "James", 26, "Male")
+
+            console.log(femi.greet())
+            console.log(femi.saySex())
+
+
+            // Public, Private and Protected Field in Javascript (Modifiers)
+
+            function MyClass(publicField, privateField, protectedField){
+                // Public Field
+                this.publicField = publicField
+
+                // Private Field (closure)
+                const _privateField = privateField
+
+                // Proteccted Field (closure)
+                const _protectedField = protectedField
+
+
+
+                // Accessing the fields through methods()
+
+                this.publicMethod = function(){
+                    return this.publicField
+                }
+
+                // (closure function)
+                function _privateMethod(){
+                    return _privateField
+                }
+
+                // (closure function)
+                function _protectedMethod(){
+                    return _protectedField
+                }
+
+                // Method to access the protected Method()
+                this.accessProtectedMethod = function(){
+                    return _protectedMethod()
+                }
+
+                
+            }
+
+            const classes = new MyClass("one", "two", "three")
+
+            console.log(classes.accessProtectedMethod()) // Protected Method Now Accessible
+
+            console.log(classes.publicField) //Public Field is Globally Accessible
+
+            console.log(classes.publicMethod()) //Public Methood Also GLobally Accessible
+
+            console.log(classes._privateMethod()) // Throws an Error, not aaccessible
+            console.log(classes._privateField) // Undefined, not Accessible
+
+
+
+
+
+
+
+
+
+
+
+
+        </script> <!-- TODO: Update app entry point -->
+    </body>
+
+</html>
