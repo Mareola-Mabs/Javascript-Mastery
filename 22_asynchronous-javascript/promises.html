@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+        <title>Promises</title> <!-- TODO: update page title -->
+
+        <meta name="description" content="Page Description"> <!-- TODO: update meta description -->
+        <meta property="og:title" content="Home - Page">  <!-- TODO: update og:title -->
+        <meta property="og:description" content="OG Page Description">  <!-- TODO: update og:description -->
+        <meta property="og:image" content="/path/to/image">  <!-- TODO: og:image -->
+        <meta property="og:image:alt" content="OG Image Description"> <!-- TODO: update og:image:alt -->
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="large-image-twitter.jpg"> <!-- TODO: update twitter:card -->
+        <link rel="icon" href="">
+        <link rel="icon" href="" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <meta name="theme-color" content="#FF00FF"> <!-- TODO: update meta theme color -->
+        <link rel="stylesheet" href="">  <!-- TODO: Update styles -->
+        <link rel="stylesheet" href="" media="print">
+    </head>
+
+    <body>
+
+        <!-- Content -->
+        <header>  </header>
+
+        <main>  </main>
+
+        <footer>  </footer>
+
+        <!-- Scripts -->
+        <script defer>
+
+            // Promises
+            const promiseObj = new Promise((res, rej) =>{
+                let req = false
+
+                req === true? res("Req Successful")
+                : rej("Req Rejected")
+
+            })
+
+            promiseObj.then((value) => console.log(value))
+            .catch((err) => console.log(err))
+
+
+
+            // E.g:2
+            function checkNum(number){
+                return new Promise((res, rej) =>{
+                    if (number % 2 === 0){
+                        res(`${number} is an even number`)
+                    }
+                    else{
+                        rej(`${number} is an odd number`)
+                    }
+                })
+            }
+
+
+            checkNum(6) //Resolve num is even
+            .then((val) => console.log("Success "+val))    
+            .catch((err) => console.log("Error "+err))    
+             
+
+
+
+
+
+
+
+
+        </script> <!-- TODO: Update app entry point -->
+    </body>
+
+</html>
